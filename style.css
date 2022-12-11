@@ -1,0 +1,821 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+.bar i {
+    display: none;
+    margin-left: 12.5rem;
+}
+.navinfo{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+    background-color: rgb(33, 33, 33);
+    height: 100px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    transition: top 0.3s ease-out;
+    box-shadow: 2px -1px 10px 10px rgba(0, 0, 0, 0.42);
+
+}
+
+.navinfo.hide{
+    top: -61px;
+}
+.garena{
+    padding-top: 2rem;
+    margin-right: 1rem;
+    width: 100px;
+}
+.go{
+    margin-right: 5rem;
+    width: 120px;
+}
+.wid{
+    margin-top: 7rem;
+    margin-right: 8rem;
+    width: 700px;
+    
+}
+
+
+@keyframes box-jumping{
+0%{
+    transform: translateY(0%);
+    transform: translateX(0%);
+}
+50%{
+    transform: translateX(-3%);
+    transform: translateY(-3%);
+}
+100%{
+    transform: translateY(0%);
+    transform: translateX(0%);
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nava{
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+    font-size: 20px;
+    background-color: rgb(33, 33, 33);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition-property:color,font-size;
+    transition:  0.2s ease-out;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    list-style: none;
+    padding-top: 6px;
+    padding-bottom: 9px;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+    
+}
+
+.buttonnav{
+    text-decoration: none;
+    color: black;
+    background-color: #ffffff;
+}
+.nava:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffeb50;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    
+}
+.nava:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.buttonnav{
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 5rem;
+    transition-property:color;
+    transition:  0.2s ease-out;
+}
+.buttonnav:hover{
+    color: white;
+    background-image: linear-gradient(90deg, rgba(148, 61, 255, 1) 0%, rgba(102, 237, 255, 1) 100%);
+}
+
+
+
+/* ------------------------------------------------------------- */
+#videoBG{
+    margin-top: 0rem;
+    background-color: rgba(0, 0, 0, 0.42);
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 1000px;
+    margin-left: 0;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contain{
+    background-color: rgb(255, 255, 255,0.7);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 6rem;
+    
+    height: 1000px;
+    
+    
+}
+#blockgo{
+    animation-name: box-jumping;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    width: 100%;
+}
+.child{
+    
+   
+    
+    width: 600px;
+    margin-top: 5rem;
+    margin-bottom: 25rem;
+    
+    
+}
+
+.logo{
+    
+    margin-left: 6.5rem;
+    width: 400px;
+    margin-top: 4rem;
+}
+
+.goog{
+    margin-left: 6.5rem;
+    width: 400px;
+   
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------- */
+
+
+.describeGame{
+    
+    transition-duration: 0.4s;
+    margin-right: 200px;
+    margin-top: 60px;
+    margin-left: 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 10, 10);
+    border-color: rgb(10, 10, 10);
+    width: 1400px;
+    height: 450px;
+    border-radius: 1rem;
+    font-family: 'Mitr', sans-serif;
+    display: flex;
+    
+    
+    
+}
+.des1{
+    top: 50%;
+    left:50%;
+}
+
+.slide-main{
+    
+    border: 1px solid red;
+    display: flex;
+    width: 700px;
+    height: 600px;
+    transition: 0.8s ease-in-out ;
+    
+
+}
+.imggame{
+    border-radius: 1rem;
+    width: 320px;
+    height: 400px;
+    margin-top: 25px;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+
+
+.T1{
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 0px;
+    padding-bottom: 0px;
+    
+    
+}
+.titleGame{
+    
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    
+}
+.describeAbout{
+    font-size: 20px;
+    font-weight:bold;
+    text-align: left;
+    margin-top: 20px;
+    width: 300px;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+.FirstdescribeGame{
+    transition-duration: 0.4s;
+    margin-right: 200px;
+    margin-top: 60px;
+    margin-left: 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 10, 10);
+    align-content: center;
+    
+    height: 450px;
+    border-radius: 1rem;
+    font-family: 'Mitr', sans-serif;
+    display: flex;
+    
+}
+.LastdescribeGame{
+    transition-duration: 0.4s;
+    margin-right: 200px;
+    margin-top: 60px;
+    margin-left: 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 10, 10);
+    border-color: rgb(10, 10, 10);
+    width: 1300px;
+    height: 450px;
+    border-radius: 1rem;
+    font-family: 'Mitr', sans-serif;
+    display: flex;
+}
+.slide-container{
+    
+    /*margin: auto;*/
+    margin-right: 5rem;
+   
+    width: 730px;
+    
+   
+    overflow: hidden;
+    margin-top: 200px;
+    display: flex;
+    
+
+    
+}
+#PreviousBt{
+    position: absolute;
+    top: 45.5%;
+    left: 50.5%;
+    z-index: 10;
+    cursor: pointer;
+    width: 50px;
+}
+#NextBt{
+    position: absolute;
+    top: 45.5%;
+    right: 2.8%;
+    z-index: 10;
+    cursor: pointer;
+    width: 50px;
+}
+.ButtonRead{
+    font-family: 'Noto Sans Thai', sans-serif;
+    position: absolute;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 1rem;
+    
+    color: black;
+    left: 10%;
+    top: 20%;
+}
+.DisplayFlex{
+   
+    height: 1000px;
+    width: 100%;
+    
+    justify-content: center;
+    display: flex;
+    
+    position: absolute;
+    
+    
+    
+}
+.Picchar{
+    
+    width: 100%;
+    animation-name: box-jumping;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    margin-right: 0px;    
+}
+#kid{
+    width: 1900px;
+}
+.Character{
+    display: flex;
+  
+    margin-top: 170px;
+    width: 960px;
+    height: 540px;
+    margin-right: 0px;
+    transition: 0.8s ease-in-out ;
+    border-radius: 2rem;
+    
+}
+.BigCharacter{
+    
+    
+    overflow: hidden;
+}
+.BackgroundBg1{
+    
+    display: flex;
+    
+    padding: 0px;
+    
+    transition: 0.8s ease-in-out ;
+}
+.SuperMain{
+    top: 111%;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    padding: 0px;
+    
+}
+
+#pee{
+    width: 2000px;
+}
+
+.Bg{
+    
+    
+    opacity: 0.3;
+    width: 2100px;
+    height: 1000px;
+}
+.SubBg{
+    
+    overflow-x: hidden;
+    
+}
+.PiccharGameDot{
+    border-radius:  40%;
+    width: 100%;
+    height: 100%;
+    margin-right: 0px;
+}
+.BorderButton{
+    background-color: rgb(255, 218, 72);
+    border: rgb(255, 218, 72);
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    left: 220px;
+    right: 0;
+    bottom: 20px;
+    border-radius: 1rem;
+    text-align: center;
+    transition-property:color;
+    transition:  0.2s ease-out;
+    
+    
+}
+.BorderButton:hover{
+    background-color: rgb(127, 127, 127);
+    border: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    
+}
+.BorderButton:hover .ButtonRead{
+    color:rgb(255, 255, 255);
+}
+
+#footer{
+    color: white;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 200px;
+    
+}
+#blo{
+    margin-right: 2rem;
+    height: 50px;
+    width: 300px;
+}
+#ga{
+    height: 100px;
+    width: 100px;
+}
+/* ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box-area{
+    position: absolute;
+    top:111%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.box-area li{
+    position: absolute;
+    top:80%;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(200, 98, 255, 0.7);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+.box-area li:nth-child(1){
+    left: 86%;
+    width: 80px;;
+    height: 80px;
+    animation-delay: 0s;
+}
+.box-area li:nth-child(2){
+    left: 12%;
+    width: 30px;;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+.box-area li:nth-child(3){
+    left: 70%;
+    width: 100px;;
+    height: 100px;
+    animation-delay: 5.5s;
+
+}
+.box-area li:nth-child(4){
+    left: 42%;
+    width: 150px;;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+.box-area li:nth-child(5){
+    left: 65%;
+    width: 40px;;
+    height:40px;
+    animation-delay: 0s;
+
+}
+.box-area li:nth-child(6){
+    left: 15%;
+    width: 110px;;
+    height: 110px;
+    animation-delay: 3.5s;
+
+}
+.box-area li:nth-child(7){
+    left: 85%;
+    width: 25px;;
+    height: 25px;
+    animation-delay: 2.5s;
+
+}
+.box-area li:nth-child(8){
+    left: 95%;
+    width: 35px;;
+    height: 35px;
+    animation-delay: 1.75s;
+    animation-duration: 7.5s;
+
+}
+.box-area li:nth-child(9){
+    left: 5%;
+    width: 60px;;
+    height: 60px;
+    animation-delay: 3.5s;
+
+}
+.box-area li:nth-child(10){
+
+    left: 55%;
+    width: 38px;;
+    height: 38px;
+    animation-delay: 2.5s;
+
+}
+@keyframes animate{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+
+@media screen and (min-width: 800px) and (max-width:1622px){
+    .BigCharacter{
+        visibility: collapse;
+        width: 0;
+        height: 0%;
+    }
+    .slide-main{
+
+        
+        display: flex;
+        width: 700px;
+        height: 600px;
+        transition: 0.8s ease-in-out ;
+        
+
+    }
+    .imggame{
+        margin-right: 20px;
+        width: 280px;
+    }
+    .T1{
+        margin-right: 20px;
+    }
+    #PreviousBt{
+        position: absolute;
+        top: 75.5%;
+        left: 5%;
+        z-index: 10;
+        margin-top: 0px;
+        cursor: pointer;
+        width: 50px;
+    }
+    .slide-container{
+        margin-left: 80px;
+        margin: auto;
+        
+    }
+    #NextBt{
+
+        height: 50px;
+        margin-top: 0px;
+        top: 75.5%;
+        right:18.25%;
+        z-index: 10;
+        cursor: pointer;
+        width: 50px;
+    }
+    .SuperMain{
+        top: 140%;
+        left: 5%;
+    }
+}
+
+
+
+@media screen and (min-width: 375px) and (max-width:799px){
+.BigCharacter{
+    visibility: collapse;
+    width: 0;
+    height: 0%;
+}
+.imggame{
+    margin-right: 20px;
+    width: 256px;
+    height: 256px;
+    margin-left: 40px;
+}
+.T1{
+    margin-right: 20px;
+    margin-left: 20px;
+    display: block;
+}
+#PreviousBt{
+    position: absolute;
+    margin-top: 0px;
+    top: 43.5%;
+    left: 4.25%;
+    z-index: 10;
+    cursor: pointer;
+    width: 50px;
+}
+.slide-container{
+   
+    margin-left: 100px;
+    margin: auto;
+    /*margin: auto;*/
+    display: block;
+    width: 340px;
+    height: 600px;
+    margin-bottom:0px;
+}
+#NextBt{
+    
+    height: 50px;
+    margin-top: 0px;
+    top: 43.5%;
+    right:4.25%;
+    z-index: 10;
+    cursor: pointer;
+    width: 50px;
+}
+.describeGame{
+    display: block;
+    margin-left: 0px;
+    margin-right: 100px;
+    height: 600px;
+    margin-top: 0px;
+    
+}
+.slide-main{
+
+    display: flex;
+    width: 400px;
+    height: 600px;
+    transition: 0.8s ease-in-out ;
+    
+
+}
+.FirstdescribeGame{
+    display: block;
+    height: 600px;
+    
+    margin-right: 100px;
+    margin-top: 0px;
+}
+.LastdescribeGame{
+    display: block;
+    
+    margin-right: 100px;
+    height: 600px;
+    margin-top: 0px;
+}
+.BorderButton{
+    background-color: rgb(255, 218, 72);
+    border: rgb(255, 218, 72);
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    bottom:-80%;
+    border-radius: 1rem;
+    text-align: center;
+    transition-property:color;
+    transition:  0.2s ease-out;
+    
+    
+}
+.BorderButton:hover{
+    background-color: rgb(127, 127, 127);
+    border: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    
+}
+.BorderButton:hover .ButtonRead{
+    color:rgb(255, 255, 255);
+}
+.SuperMain{
+    top: 150%;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    padding: 0px;
+    
+}
+.describeAbout{
+    font-size: 16px;
+    font-weight:bold;
+    text-align: left;
+    margin-top: 20px;
+    width: 300px;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+.titleGame{
+
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    
+}
+#footer{
+    height: 400px;
+    
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,992 @@
+body{
+    font-family: 'Noto Sans Thai', sans-serif;
+    background-color: antiquewhite;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+.navinfo{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+    background-color: rgb(33, 33, 33);
+    height: 100px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    transition: top 0.3s ease-out;
+    box-shadow: 2px -1px 10px 10px rgba(0, 0, 0, 0.42);
+
+}
+.navinfo > h1{
+    font-size: 50px;
+    margin-left: 5rem;
+    margin-right: 3rem;
+}
+.navinfo.hide{
+    top: -61px;
+}
+.garena{
+    padding-top: 2rem;
+    margin-right: 1rem;
+    width: 100px;
+}
+.go{
+    margin-right: 5rem;
+    width: 120px;
+}
+.wid{
+    margin-top: 7rem;
+    margin-right: 8rem;
+    width: 700px;
+    
+}
+
+
+@keyframes box-jumping{
+0%{
+    transform: translateY(0%);
+    transform: translateX(0%);
+}
+50%{
+    transform: translateX(-3%);
+    transform: translateY(-3%);
+}
+100%{
+    transform: translateY(0%);
+    transform: translateX(0%);
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nava{
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+    font-size: 20px;
+    background-color: rgb(33, 33, 33);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition-property:color,font-size;
+    transition:  0.2s ease-out;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    list-style: none;
+    padding-top: 6px;
+    padding-bottom: 9px;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+    
+}
+
+.buttonnav{
+    text-decoration: none;
+    color: black;
+    background-color: #ffffff;
+}
+.nava:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffeb50;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    
+}
+.nava:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.buttonnav{
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 5rem;
+    transition-property:color;
+    transition:  0.2s ease-out;
+}
+.buttonnav:hover{
+    color: white;
+    background-image: linear-gradient(90deg, rgba(148, 61, 255, 1) 0%, rgba(102, 237, 255, 1) 100%);
+}
+.header{   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    margin-top: 60px ;
+    color: black;
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+
+
+}
+.meat{
+    font-size: 100px;
+}
+
+.bar i{
+    display: none;
+}
+
+/* ------------------------------------------slide----------------------------------- */
+
+.slider{
+    
+    margin-left: 2%;
+    width: 1420px;
+    height: 700px;
+    overflow: hidden;
+}
+figure{
+    position: relative;
+    left: 0;
+    width: 800%;
+    animation: 50s slides infinite;
+
+}
+
+.slide{
+    position: relative;
+    width: 12.5%;
+    float: left;
+    height: 100%;
+
+}
+
+/* .slide h1{
+    position: absolute;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    margin-top: 300px;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}  */
+
+.slide img{
+    width: 100%;
+    height: 700px;
+
+    
+}
+
+@keyframes slides{
+    0%{
+        left:0;
+    }
+    7.5%{
+        left:-100;
+    }
+    15%{
+        left:-200%;
+    }
+    22.5%{
+        left:-300%;
+    }
+    30%{
+        left:-400%
+    }
+    37.5%{
+        left:-500%
+    }
+    45%{
+        left:-600%
+    }
+    52.5%{
+        left: -700%
+    }
+    60%{
+        left: -600%
+    }
+    67.5%{
+        left: -500%
+    }
+    75%{
+        left: -400%
+    }
+    82.5%{
+        left: -300%
+    }
+    90%{
+        left: -200%
+    }
+    95%{
+        left: -100%
+    }
+    100%{
+        left: 0%
+    }
+}
+
+/* ------------------------------------------------ */
+
+.minigameli{
+    width: 100vw;
+    height: 500px;
+    margin-left:0px;
+    margin-right: 500px;
+    margin-top: 50px;
+    list-style-type: none;
+    /* border: 5px solid black; */
+    border-radius: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    /* background-color: #0087ca; */
+
+}
+
+.minigame{
+    font-size: 50px;
+    margin-left: 0%;
+    /* border: 5px solid black; */
+    margin-top: -30px;
+}
+
+#list > h1{
+    color: rgb(33, 33, 33);
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 0px;
+}
+
+.description{
+    width : 800px;
+    padding: 30px;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 1rem;
+    
+}
+.description:hover{
+    font-size: 25px;
+}
+#list{
+    width: 650px;
+    height: 500px;
+
+}
+
+.nuea{
+    justify-content: center;
+    
+    display: flex;
+    width: 1700px;
+    
+    border-radius: 50px;
+    margin-left: 30px;
+    margin-bottom: 3rem;
+    
+    
+    
+
+}
+
+.imgapi{
+    
+    border-radius: 1rem;
+    box-shadow: 2px -1px 10px 10px rgba(0, 0, 0, 0.42);
+    height: 400px;
+    width: 400px;
+    margin-left: 100px;
+
+
+
+}
+.slider{
+    margin: 0 auto;
+}
+
+/* -----------------slider head------------ */
+/* .load{
+    animation: slide 2s;
+}
+
+.sliderhead{
+    text-align: center;
+    margin-top: 92px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    width : 100%;
+    height: 850px;
+    animation: slide 10s infinite;
+}
+.slider{
+    margin: 0 auto;
+}
+.content{
+    margin-top: -16px;
+    color: #fff;
+    width: 100%;
+    height: 850px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.principal{
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    position : absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+}
+
+.principal h1{
+    margin-top: -10rem;
+    font-size: 100px;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes slide{
+    0%{
+        background-image: url('/images/bedwars_01.png');
+    }
+    20%{
+        background-image: url('/images/bedwars_01.png');
+    }
+    20.01%{
+        background-image: url('/images/bedwars_02.png');
+    }
+    40%{
+        background-image: url('/images/bedwars_02.png');
+    }
+    40.01%{
+        background-image: url('/images/bedwars_04.png');
+    }
+    60%{
+        background-image: url('/images/bedwars_04.png');
+    }
+    60.01%{
+        background-image: url('/images/bedwars_05.png');
+    }
+    90%{
+        background-image: url('/images/bedwars_05.png');
+    }
+    100%{
+        background-image: url('/images/bedwars_01.png');
+    }
+}  */
+
+/* ----------------------------------------------------------------- */
+
+.toprankli{
+    list-style-type: none;
+    background-color: rgb(33, 33, 33);
+    margin-top: 60px;
+    width: 100%;
+    height:700px
+}
+
+.toprank{
+    color: white;
+    text-align: center;
+}
+
+
+
+.toprank h1{
+    font-size: 150px;
+    /* border: 5px solid red; */
+}
+
+.toprank h3{
+    margin-top: -120px;
+    /* border: 5px solid black; */
+}
+
+.podium{
+    margin-top: 65px;
+    display: flex ;
+    justify-content: center;
+
+}
+
+
+.podium1{
+    background-image: linear-gradient(90deg, rgba(247, 24, 24, 1) 0%, rgba(232, 24, 247, 1) 100%);
+    border-radius: 1rem 1rem 0px 0px;
+    width : 300px;
+    height: 440px;
+    margin-top: -40px;
+    text-align: center;
+}
+
+
+
+.podium1 img{
+    border-radius: 1rem;
+    margin-top: -20px;
+    width: 200px;
+    height: 200px;
+    
+}
+.podium1 h1{
+    color: white;
+    margin-top: 5px;
+}
+
+
+
+.podium2{
+    background-image: linear-gradient(90deg, rgba(34, 97, 109, 1) 0%, rgba(24, 247, 68, 1) 100%);
+    border-radius: 1rem 1rem 0px 0px;
+    width : 300px;
+    height: 390px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 10px;
+    text-align: center;
+
+}
+.podium2 img{
+    border-radius: 1rem;
+    margin-top: -20px;
+    width: 200px;
+    height: 200px;
+    
+}
+.podium2 h1{
+    color: white;
+    margin-top: 5px;
+}
+
+.podium3{
+    color: rgb(245, 238, 238);
+    
+    background-image: linear-gradient(90deg, rgba(34, 63, 109, 1) 0%, rgba(24, 243, 247, 1) 100%);
+    border-radius: 1rem 1rem 0px 0px;
+    width : 300px;
+    height: 350px;
+    margin-top: 50px;
+    text-align: center;
+}
+.podium3 img{
+    margin-top: -20px;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 1rem;
+}
+.podium3 h1{
+    color: white;
+    margin-top: 5px;
+}
+
+.stat1{
+    display : flex;
+    margin-left: 13px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.stat1 img{
+    border: none;
+    width:50px;
+    height: 50px;
+    margin-top: 10px;
+}
+.stat1{
+    display : flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.stat1 h3{
+    margin-left: 5px;
+    color: white;
+    margin-top: 5px;
+}
+.heart1{
+    margin-left: 20px;
+}
+
+
+.stat2{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.stat2 img{
+    border: none;
+    width:50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.stat2 h3{
+    margin-left: 5px;
+    color: white;
+    margin-top: 3px;
+}
+.heart2{
+    margin-left: 20px;
+}
+
+.stat3{
+    display: flex;
+    justify-content: center;
+    margin-top: -8px;
+}
+
+.stat3 img{
+    border: none;
+    width:50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.stat3 h3{
+    margin-left: 5px;
+    color: white;
+    margin-top: -1px;
+}
+.heart3{
+    margin-left: 20px;
+}
+
+
+/* -------------------------------------- */
+
+.graphicli{
+    width: 100%;
+    height: 900px;
+    list-style-type: none;
+}
+.graphic{
+    color: rgb(33, 33, 33);
+    text-align: center;
+    padding-top: 30px;
+    font-size: 70px;
+    margin-left: 3%;
+}
+#footer{
+    color: white;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 200px;
+    width: 100%;
+}
+#blo{
+    margin-right: 2rem;
+    height: 50px;
+    width: 300px;
+}
+#ga{
+    height: 100px;
+    width: 100px;
+}
+
+@media screen and (max-width: 900px){
+    #h1test{
+        font-size: 70px;
+    }
+    .slider{
+        width: 800px;
+        height: 500px;
+    }
+    #list{
+        width:400px;
+    }
+    .graphicli{
+        height:750px;
+    }
+
+    .nuea{
+        width:200px;
+        margin-left: -320px;
+    }
+    .imgapi{
+        width:200px;
+        height: 200px;
+        margin-top: 120px;
+        
+    }
+    #list h1{
+        font-size: 70px;
+        margin-left: 233px;
+    }
+    .description{
+        height: 370px;
+        margin-top: 30px;
+        font-size: 22px;
+        margin-left: 20px;
+        width:350px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .minigameli{
+        height:600px
+    }
+
+    #h1toprank{
+        font-size: 100px;
+        padding-top: 30px;
+    }
+    #h3toprank{
+        margin-top: -70px;
+    }
+    .podium{
+        margin-left: -220px;
+    }
+    .podium1{
+        padding-top: 40px;
+        margin-left: 200px;
+        margin-top: 18px;
+        width :200px;
+        font-size: 13px;
+        height: 400px;
+    }
+    .podium1 img{
+        width:120px;
+        height: 120px;
+        margin-top: 10px;
+    }
+    .stat1 img{
+        width : 60px;
+        height: 60px;
+    }
+    .stat1 h3{
+        font-size: 20px;
+        margin-left: 2px;
+    }
+    .heart1{
+        margin-left: 10px;
+    }
+    .podium2{
+        padding-top: 40px;
+        margin-top: 68px;
+        width: 200px;
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 13px;
+        height: 350px;
+    }
+    .podium2 img{
+        width:120px;
+        height: 120px;
+        margin-top: 10px;
+    }
+    .stat2 img{
+        width : 60px;
+        height: 60px;
+    }
+    .stat2 h3{
+        font-size: 20px;
+    }
+    .heart2{
+        margin-left: 10px;
+    }
+    .podium3{
+        padding-top: 40px;
+        margin-top: 108px;
+        width: 200px;
+        font-size: 13px;
+        height : 310px;
+    }
+    .podium3 img{
+        width:120px;
+        height: 120px;
+        margin-top: 10px;
+    }
+    .stat3 img{
+        width : 60px;
+        height: 60px;
+    }
+    .stat3 h3{
+        font-size: 20px;
+    }
+    .podium{
+        margin-left: -200px;
+    }
+
+    .toprankli{
+        height: 730px;
+    }
+
+
+    .go{
+        width: 80px;
+        margin-right: 20px;
+    }
+    .garena{
+        width: 70px;
+        margin-right: 0px;
+    }
+    .nava{
+        margin-right: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .buttonnav{
+        display : none;
+    }
+    .navinfo{
+        width: 100%;
+
+    }
+    nav{
+        margin-right: 18rem;
+    }
+}
+
+@media screen and (max-width: 1790px){
+    .nuea{
+        width:1320px
+    }
+}
+
+@media screen and (max-width: 500px){
+    body{
+        max-height: 600px;
+    }
+    .garena{
+        margin-left: 0.5rem;
+    }
+    .navinfo{
+        display: flex;
+        justify-content: left;
+    }
+    .hai{
+        /* display: none; */
+        width: 100%;
+    }
+    .bar i {
+        display: flex;
+        margin-left: 12.5rem;
+    }
+    
+    .buttonnav{
+        display: none;
+    }
+    nav{
+        
+        position:absolute;
+        width: 100%;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-top: 350px;
+        opacity: 0%;
+        display: none;
+            
+            
+            
+                    
+        transition: opacity 0.2s ease-in-out
+    }
+    nav >a{
+        display: flex;
+        flex-direction: column;
+        padding: 20rem;
+            
+            
+            
+
+    }
+    nav > a:hover{
+        background: rgba(82, 82, 82, 0.1);
+    }
+    .show{
+        display: block;
+        opacity: 100%;
+    }
+    .nava{
+        
+        padding: 1rem;
+        display: flex;
+    }
+    #blockgo{
+        width: 415px;
+    }
+    #videoBG{
+        height: 600px;
+        width: 100%;
+    }
+    .logo{
+        margin-top: 2rem;
+        width: 50%;
+    }
+    .goog{
+        
+        width: 50%;
+    }
+    #blockgo{
+        margin-left: 2.5rem;
+        width: 80%;
+    }
+    .child{
+        
+        width: 100%;
+        height: 500px;
+        
+        margin-top: 2.5rem;
+        
+    }
+    .SuperMain{
+        height: 600px;
+    }
+    .box-area{
+        top: 750px;
+    }
+    .contain{
+        
+        height: 600px;
+    }
+    #blo{
+        
+        width: 250px;
+        height: 40px;
+    }
+    #ga{
+        margin: 0px;
+        width: 90px;
+        height: 90;
+    }
+    .slide-container{
+        margin-top: -300px;
+    }
+    .DisplayFlex{
+        height: 700px;
+    }
+
+    #list h1{
+        font-size: 40px;
+        margin-left: -140px;
+    }
+    .description{
+        width:280px;
+        height: 150px;
+        margin-left: -45px;
+        margin-top: 0px;
+        font-size: 15px;
+    }
+    .nuea{
+        margin-left: -470px;
+        display:inline;
+        justify-content: center;
+    }
+    .imgapi{
+        margin-left: 50px;
+        margin-top: 40px;
+        width:150px;
+        height: 150px;
+    }
+    .graphic{
+        font-size: 30px;
+    }
+    #h1test{
+        font-size: 50px;
+    }
+    #ptest{
+        font-size: 12px;
+    }
+    .slider{
+        width: 350px;
+        height: 250px;
+    }
+    .graphicli{
+        height: 400px;
+    }
+    .slide img{
+        height: 250px;
+    }
+    .sliderhead{
+        height: 600px;
+    }
+    .content{
+        height: 600px;
+    }
+    .minigameli{
+        height: 500px;
+    }
+    #h1toprank{
+        font-size: 60px;
+    }
+    #h3toprank{
+        font-size: 15px;
+        margin-top: -40px;
+    }
+    .stat1{
+        display: none;
+    }
+    .stat2{
+        display: none;
+    }
+    .stat3{
+        display: none;
+    }
+    .podium1{
+        width : 80px;
+        writing-mode: tb-rl;
+    }
+    .podium2{
+        width : 80px;
+        writing-mode: tb-rl;
+    }
+    .podium3{
+        width : 80px;
+        writing-mode: tb-rl;
+    }
+    .podium1 img{
+        width :60px;
+        height :60px;
+        margin-top: -250px;
+        margin-right: -88px;
+        transform: rotate(90deg);
+    }
+    .podium2 img{
+        width :60px;
+        height :60px;
+        margin-top: -250px;
+        margin-right: -88px;
+        transform: rotate(90deg);
+    }
+    .podium3 img{
+        width :60px;
+        height :60px;
+        margin-top: -250px;
+        margin-right: -88px;
+        transform: rotate(90deg);
+    }
+    .toprankli{
+        height: 667px;
+    }
+}
