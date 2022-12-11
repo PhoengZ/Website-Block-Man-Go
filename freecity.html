@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Freecity</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>BLOCKMAN GO</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@800&display=swap');
+            .load{
+                animation: slide 2s;
+            }
+
+            .sliderhead{
+                text-align: center;
+                margin-top: 92px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position:center;
+                width : 100%;
+                height: 850px;
+                animation: slide 15s infinite;
+            }
+            .slider{
+                margin: 0 auto;
+            }
+            .content{
+                margin-top: -16px;
+                color: #fff;
+                width: 100%;
+                height: 850px;
+                background-color: rgba(0, 0, 0, 0.7);
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .principal{
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%,-50%);
+                position : absolute;
+                /* background-color: rgba(0, 0, 0, 0.5); */
+                letter-spacing: 5px;
+            }
+
+            .principal h1{
+                margin-top: -10rem;
+                font-size: 100px;
+                margin-bottom: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            @keyframes slide{
+                0%{
+                    background-image: url('images/freecity_01.png');
+                }
+                20%{
+                    background-image: url('images/freecity_01.png');
+                }
+                20.01%{
+                    background-image: url('images/viewfreecity_01.PNG');
+                }
+                40%{
+                    background-image: url('images/viewfreecity_01.PNG');
+                }
+                40.01%{
+                    background-image: url('images/freecity_03.png');
+                }
+                60%{
+                    background-image: url('images/freecity_03.png');
+                }
+                60.01%{
+                    background-image: url('images/viewfreecity_12.PNG');
+                }
+                90%{
+                    background-image: url('images/viewfreecity_12.PNG');
+                }
+                100%{
+                    background-image: url('images/freecity_01.png');
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="css/stylefreecity.css">
+    </head>
+
+    <body>
+        <script>
+            fetch("https://gamertocoder.garena.co.th/api/minigames")
+              .then((response) => {
+                if (response.status !== 200) {
+                  return response.status;
+                }
+                return response.json();
+              })
+              .then((data) => {
+                if (typeof data == "number") {
+                  alert(data);
+                } else {
+                    const newListItem = document.createElement("li");
+                    newListItem.classList.add("card");
+                    // console.log("data : " ,data); 
+                    // console.log("bedwar : " , data[0])  
+                    // console.log("bedwar : " , data[0].description)                
+                    const html = '<div class="nuea"><div class="description">'+ data[1].description + '</div>'  
+                    +'<img class="imgapi" src="'+data[1].icon+'"/></div>'
+                    newListItem.innerHTML = html;
+                    document.getElementById("list").appendChild(newListItem);
+
+                    // const newListItem1 = document.createElement("li");
+                    // newListItem1.classList.add("card");
+                    // const html2 = '<div class="name">'+ data[0].name + '</div>'
+                    // newListItem.innerHTML = html2;
+                    // document.getElementById("headd").appendChild(newListItem1);
+                }
+              }
+              );
+        </script>
+        <div class="navinfo">
+            <a href="https://www.garena.co.th/" target="_blank"><img class="garena" src="images/5165151.png"></a>
+                <a href="index.html"><img class="go" src="images/03_copy.png"></a>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <a class="nava" href="index.html" ><b>หน้าหลัก</b></a>
+                <a class="nava" href="index.html" ><b>ข้อมูลเกม</b></a>
+                <a class="nava" href="https://blockmaneditor.garena.com/" ><b>Create</b></a>
+                <a class="nava" href="https://blockmanforum.garena.com/en/" ><b>Blockman Forum</b></a>
+                <a class="buttonnav" href="https://pc.blockmanmobile.com/#/" target="_blank" >เล่นเลย</a>
+                
+            </nav>
+        </div>
+        <li>
+            <div class="sliderhead">
+                <div class="load">
+                </div>
+                <div class="content">
+                    <div class="principal">
+                        <h1 id="h1test">Free city</h1>
+                        <p id="ptest">-Live as your life-</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="minigameli">
+            <div id="list">
+                <h1 >-เนื้อหา-</h1>
+
+
+            </div>
+        </li>
+
+        <li class="toprankli">
+            <div class="toprank">
+                <h1 id="h1toprank">Top 3</h1>
+                <h3 id="h3toprank">-เกมยอดนิยม Blockman Go-</h3>
+            </div>
+            <div class="podium">
+                <div class="podium1">
+                    <h1>#1 : Bedwar</h1>
+                    <img src="images/logobedwar.png"/>
+                    <div class="stat1">
+                        <div class="joystrick1">
+                            <img src="images/joystrick.png"/>
+                            <h3>43,679</h3>
+                        </div>
+                        <div class="heart1">
+                            <img src="images/heart.png"/>
+                            <h3>4,670,058</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="podium2">
+                    <h1>#2 : Skyblock</h1>
+                    <!-- <h3>skyblock</h3> -->
+                    <img src="images/skyblocklogo.png"/>
+                    <div class="stat2">
+                        <div class="joystrick2">
+                            <img src="images/joystrick.png"/>
+                            <h3>17,542</h3>
+                        </div>
+                        <div class="heart2">
+                            <img src="images/heart.png"/>
+                            <h3>1,648,162</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="podium3">
+                    <h1>#3 : Freecity</h1>
+                    <!-- <h3>Freecity</h3> -->
+                    <img src="images/freecitylogo.png"/>
+                    <div class="stat3">
+                        <div class="joystrick3">
+                            <img src="images/joystrick.png"/>
+                            <h3>6,633</h3>
+                        </div>
+                        <div class="heart3">
+                            <img src="images/heart.png"/>
+                            <h3>685</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="graphicli">
+            <div class="graphic">
+                <div>-กราฟิกภายในเกม-</div>
+            </div>
+            <div class="slider">
+                <figure >
+                    <div class="slide">
+                        <img src="images/viewfreecity_14.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewfreecity_06.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewfreecity_04.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewfreecity_08.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewfreecity_11.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewfreecity_10.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewfreecity_13.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewfreecity_01.PNG" alt="">
+                    </div>
+                </figure>
+            </div> 
+        </li>
+
+        <footer id="footer">
+        
+            <img src="images/01.png" id="blo">
+            <img src="images/5165151.png" id="ga">
+        </footer>
+
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

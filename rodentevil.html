@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rodent Evil</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>BLOCKMAN GO</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@800&display=swap');
+            .load{
+                animation: slide 2s;
+            }
+
+            .sliderhead{
+                text-align: center;
+                margin-top: 92px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position:center;
+                width : 100%;
+                height: 850px;
+                animation: slide 15s infinite;
+            }
+            .slider{
+                margin: 0 auto;
+            }
+            .content{
+                margin-top: -16px;
+                color: #fff;
+                width: 100%;
+                height: 850px;
+                background-color: rgba(0, 0, 0, 0.7);
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .principal{
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%,-50%);
+                position : absolute;
+                /* background-color: rgba(0, 0, 0, 0.5); */
+                letter-spacing: 5px;
+            }
+
+            .principal h1{
+                margin-top: -10rem;
+                font-size: 100px;
+                margin-bottom: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            @keyframes slide{
+                0%{
+                    background-image: url('images/rodentevil_01.png');
+                }
+                20%{
+                    background-image: url('images/rodentevil_01.png');
+                }
+                20.01%{
+                    background-image: url('images/rodentevil_02.png');
+                }
+                40%{
+                    background-image: url('images/rodentevil_02.png');
+                }
+                40.01%{
+                    background-image: url('images/rodentevil_03.png');
+                }
+                60%{
+                    background-image: url('images/rodentevil_03.png');
+                }
+                60.01%{
+                    background-image: url('images/viewrodentevil_10.PNG');
+                }
+                90%{
+                    background-image: url('images/viewrodentevil_10.PNG');
+                }
+                100%{
+                    background-image: url('images/rodentevil_01.png');
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="css/stylerodentevil.css">
+    </head>
+
+    <body>
+        <script>
+            fetch("https://gamertocoder.garena.co.th/api/minigames")
+              .then((response) => {
+                if (response.status !== 200) {
+                  return response.status;
+                }
+                return response.json();
+              })
+              .then((data) => {
+                if (typeof data == "number") {
+                  alert(data);
+                } else {
+                    const newListItem = document.createElement("li");
+                    newListItem.classList.add("card");
+                    console.log("data : " ,data); 
+                    // console.log("bedwar : " , data[0])  
+                    // console.log("bedwar : " , data[0].description)                
+                    const html = '<div class="nuea"><div class="description">'+ data[5].description + '</div>'  
+                    +'<img class="imgapi" src="'+data[5].icon+'"/></div>'
+                    newListItem.innerHTML = html;
+                    document.getElementById("list").appendChild(newListItem);
+
+                    // const newListItem1 = document.createElement("li");
+                    // newListItem1.classList.add("card");
+                    // const html2 = '<div class="name">'+ data[0].name + '</div>'
+                    // newListItem.innerHTML = html2;
+                    // document.getElementById("headd").appendChild(newListItem1);
+                }
+              }
+              );
+        </script>
+        <div class="navinfo">
+            <a href="https://www.garena.co.th/" target="_blank"><img class="garena" src="images/5165151.png"></a>
+                <a href="index.html"><img class="go" src="images/03_copy.png"></a>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <a class="nava" href="index.html" ><b>หน้าหลัก</b></a>
+                <a class="nava" href="index.html" ><b>ข้อมูลเกม</b></a>
+                <a class="nava" href="https://blockmaneditor.garena.com/" ><b>Create</b></a>
+                <a class="nava" href="https://blockmanforum.garena.com/en/" ><b>Blockman Forum</b></a>
+                <a class="buttonnav" href="https://pc.blockmanmobile.com/#/" target="_blank" >เล่นเลย</a>
+                
+            </nav>
+        </div>
+        <li>
+            <div class="sliderhead">
+                <div class="load">
+                </div>
+                <div class="content">
+                    <div class="principal">
+                        <h1 id="h1test">Rodent Evil</h1>
+                        <p>-Run away from this haunted house-</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="minigameli">
+            <div id="list">
+                <h1 >-เนื้อหา-</h1>
+
+
+            </div>
+        </li>
+
+        <li class="graphicli">
+            <div class="graphic">
+                <div>-กราฟิกภายในเกม-</div>
+            </div>
+            <div class="slider">
+                <figure >
+                    <div class="slide">
+                        <img src="images/viewrodentevil_11.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewrodentevil_02.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewrodentevil_06.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewrodentevil_07.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewrodentevil_08.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewrodentevil_09.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewrodentevil_03.PNG" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/viewrodentevil_05.PNG" alt="">
+                    </div>
+                </figure>
+            </div> 
+        </li>
+
+
+
+
+
+
+
+        <footer id="footer">
+        
+            <img src="images/01.png" id="blo">
+            <img src="images/5165151.png" id="ga">
+        </footer>
+
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
